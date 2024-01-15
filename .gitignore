@@ -72,4 +72,4 @@ docs/_build/
 .python-version
 
 # Third party
-src/vendor/
+# src/vendor/
