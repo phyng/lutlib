@@ -18,6 +18,8 @@ authors = [
 maintainers = [
   {name = "phyng", email = "phyngk@gmail.com"}
 ]
+license = {file = "LICENSE"}
+keywords = ["lut", "3dlut", "3d-luts"]
 
 [project.urls]
 homepage = "https://github.com/phyng/lutlib"
