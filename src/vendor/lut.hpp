@@ -5,6 +5,9 @@
 #include <sstream>
 #include <fstream>
 
+#include <vector>
+#include <cmath>
+
 #include <cassert>
 
 namespace octoon
@@ -252,7 +255,7 @@ namespace octoon
 						}
 					}
 				}
-				
+
 				/*
 				* @brief 创建3D lut 查找表
 				* @param[in] s .cube文件的起始内容
@@ -343,7 +346,7 @@ namespace octoon
 					else
 					{
 						throw parse_error::create(0, 0, "The lut element does not match the size of lut");
-					}					
+					}
 				}
 
 				/*
