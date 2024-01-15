@@ -14,14 +14,10 @@ mod ffi {
 
 /// Formats the sum of two numbers as string.
 #[pyfunction]
-fn apply_lut(a: usize, b: usize) -> PyResult<String> {
+fn apply_lut(lut_path: String, image_path: String, output_path: String) -> PyResult<String> {
     let client = ffi::new_bridge_client();
-    let result = client.apply_lut(
-        "/Users/phyng/dev/lut/hype.cube".to_string(),
-        "/Users/phyng/dev/lut/1.jpg".to_string(),
-        "/Users/phyng/dev/lut/1_output.jpg".to_string(),
-    );
-    Ok((a + b).to_string() + &result)
+    let result = client.apply_lut(lut_path, image_path, output_path);
+    Ok(result)
 }
 
 /// A Python module implemented in Rust.
