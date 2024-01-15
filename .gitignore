@@ -71,6 +71,5 @@ docs/_build/
 # Pyenv
 .python-version
 
-
 # Third party
 src/vendor/

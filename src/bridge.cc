@@ -17,10 +17,6 @@ std::unique_ptr<BridgeClient> new_bridge_client() {
 
 rust::String BridgeClient::apply_lut(rust::String r_lut_path, rust::String r_image_path, rust::String r_output_path) const {
 
-  // std::string lut_path = "/Users/phyng/dev/lut/hype.cube";
-  // std::string image_path = "/Users/phyng/dev/lut/1.jpg";
-  // std::string output_path = "/Users/phyng/dev/lut/1_output.jpg";
-
   std::string lut_path = std::string(r_lut_path);
   std::string image_path = std::string(r_image_path);
   std::string output_path = std::string(r_output_path);
