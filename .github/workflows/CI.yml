@@ -42,6 +42,29 @@ jobs:
           name: wheels
           path: dist
 
+  linux_aarch64:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [aarch64]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Build wheels
+        uses: PyO3/maturin-action@v1
+        with:
+          target: ${{ matrix.target }}
+          args: --release --out dist --find-interpreter
+          sccache: 'true'
+          manylinux: '2_28'
+      - name: Upload wheels
+        uses: actions/upload-artifact@v3
+        with:
+          name: wheels
+          path: dist
+
   windows:
     runs-on: windows-latest
     strategy:
@@ -106,7 +129,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     if: "startsWith(github.ref, 'refs/tags/')"
-    needs: [linux, windows, macos, sdist]
+    needs: [linux, linux_aarch64, windows, macos, sdist]
     steps:
       - uses: actions/download-artifact@v3
         with:
