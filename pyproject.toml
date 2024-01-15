@@ -11,6 +11,18 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dynamic = ["version"]
+authors = [
+  {email = "phyngk@gmail.com"},
+  {name = "phyng"}
+]
+maintainers = [
+  {name = "phyng", email = "phyngk@gmail.com"}
+]
+
+[project.urls]
+homepage = "https://github.com/phyng/lutlib"
+documentation = "https://github.com/phyng/lutlib"
+repository = "https://github.com/phyng/lutlib"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
