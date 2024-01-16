@@ -4,6 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "lutlib"
+description = "A Python library for applying 3D LUTs to images."
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Rust",
@@ -19,6 +20,7 @@ maintainers = [
   {name = "phyng", email = "phyngk@gmail.com"}
 ]
 license = {file = "LICENSE"}
+readme = "README.md"
 keywords = ["lut", "3dlut", "3d-luts"]
 
 [project.urls]
