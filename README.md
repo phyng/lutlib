@@ -14,7 +14,7 @@ pip install lutlib
 ```python
 from lutlib import apply_lut
 
-apply_lut("path/to/lut.cube", "path/to/image.png", "path/to/output.png")
+apply_lut("path/to/lut.cube", "path/to/image.jpg", "path/to/output.jpg")
 ```
 
 ## License
